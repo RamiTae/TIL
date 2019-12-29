@@ -78,14 +78,14 @@ SQL키워드는 대소문자를 구별하지 않음.
 
   - `table_name`이라는 테이블에서 `column1`, `column2`, ... 칼럼을 선택
 
-    ```mysql
+    ```sql
     SELECT column1, column2, ...
     FROM table_name;
     ```
 
   - `table_name`의 모든 field를 출력하고 싶다면 아래와 같이 
 
-    ```mysql
+    ```sql
     SELECT * FROM table_name;
     ```
 
@@ -93,17 +93,36 @@ SQL키워드는 대소문자를 구별하지 않음.
 
   - 데이터 변경
 
+    ```sql
+    UPDATE table_name
+    SET column1 = value1, column2 = value2, ...
+    WHERE condition;
+    ```
+
 - **DELETE** - deletes data from a database
 
   - 데이터 삭제
+
+    ```sql
+    DELETE FROM table_name WHERE condition;
+    ```
 
 - **INSERT INTO** - inserts new data into a database
 
   - 데이터 추가
 
+    ```sql
+    INSERT INTO table_name (column1, column2, column3, ...)
+    VALUES (value1, value2, value3, ...);
+    ```
+
 - **CREATE DATABASE** - creates a new database
 
   - 새 데이터베이스 만들기
+
+    ```sql
+    CREATE DATABASE databasename;
+    ```
 
 - **ALTER DATABASE** - modifies a database
 
@@ -113,20 +132,29 @@ SQL키워드는 대소문자를 구별하지 않음.
 
   - 테이블 생성
 
+    ```sql
+    CREATE TABLE table_name (
+        column1 datatype,
+        column2 datatype,
+        column3 datatype,
+       ....
+    );
+    ```
+
 - **ALTER TABLE** - modifies a table
 
   - 테이블의 컬럼 수정 및 삭제
 
   - 테이블에 컬럼 추가
 
-    ```mysql
+    ```sql
     ALTER TABLE table_name
     ADD column_name datatype;
     ```
 
   - 테이블에 컬럼 삭제
 
-    ```mysql
+    ```sql
     ALTER TABLE table_name
     DROP COLUMN column_name;
     ```
@@ -135,31 +163,74 @@ SQL키워드는 대소문자를 구별하지 않음.
 
     - SQL Server / MS Access:
 
-      ```mysql
+      ```sql
       ALTER TABLE table_name
       ALTER COLUMN column_name datatype;
       ```
 
     - My SQL / Oracle (prior version 10G):
 
-      ```mysql
+      ```sql
       ALTER TABLE table_name
       MODIFY COLUMN column_name datatype;
       ```
 
     - Oracle 10G and later:
 
-      ```mysql
+      ```sql
       ALTER TABLE table_name
       MODIFY column_name datatype;
       ```
 
 - **DROP TABLE** - deletes a table
+  
   - 테이블 삭제
+  
+    ```sql
+    DROP TABLE table_name;
+    ```
 - **CREATE INDEX** - creates an index (search key)
+  
   - index추가
+  
+    ```sql
+    CREATE INDEX index_name
+    ON table_name (column1, column2, ...);
+    ```
 - **DROP INDEX** - deletes an index
+  
   - index삭제
+  
+    - MS Access:
+  
+      ```sql
+      DROP INDEX index_name ON table_name;
+      ```
+  
+    - SQL Server:
+  
+      ```sql
+      DROP INDEX table_name.index_name;
+      ```
+  
+    - DB2/Oracle:
+  
+      ```sql
+      DROP INDEX index_name;
+      ```
+  
+    - MySQL:
+  
+      ```sql
+      ALTER TABLE table_name
+      DROP INDEX index_name;
+      ```
+  
+      
+  
+    
+  
+    
 
 
 
@@ -169,7 +240,7 @@ where은 레코드(row)를 필터링하는데 사용됨.
 
 지정된 조건을 충족하는 레코드만 추출함.
 
-```mysql
+```sql
 SELECT column1, column2, ...
 FROM table_name
 WHERE condition;
@@ -181,7 +252,7 @@ SQL은 텍스트 값 주위에 작은 따옴표가 필요함(대부분의 DB시�
 
 > 아래 예제 해보기: https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_where
 
-```mysql
+```sql
 > SELECT * FROM Customers WHERE Country='Mexico';
 ```
 
@@ -203,7 +274,7 @@ SQL은 텍스트 값 주위에 작은 따옴표가 필요함(대부분의 DB시�
 
 ## 3-1. BETWEEN
 
-```mysql
+```sql
 SELECT * FROM Products
 WHERE Price BETWEEN 50 AND 60;
 ```
@@ -212,7 +283,7 @@ WHERE Price BETWEEN 50 AND 60;
 
 숫자 말고 문자열도 between을 사용할 수 있다.
 
-```mysql
+```sql
 SELECT * FROM Products 
 where ProductName between 'A' and 'C'
 ```
@@ -223,7 +294,7 @@ where ProductName between 'A' and 'C'
 
 ## 3-2. LIKE
 
-```mysql
+```sql
 SELECT * FROM Customers
 WHERE City LIKE 'sa%';
 ```
@@ -234,7 +305,7 @@ WHERE City LIKE 'sa%';
 
 ## 3-3. IN
 
-```mysql
+```sql
 SELECT * FROM Customers
 WHERE City IN ('Paris','London');
 ```
@@ -253,7 +324,7 @@ WHERE City IN ('Paris','London');
 
 and 사이에 있는 모든 조건을 만족하는 record를 추출한다.
 
-```mysql
+```sql
 SELECT * FROM Customers
 WHERE Country='Spain' AND City='Madrid';
 ```
@@ -266,7 +337,7 @@ WHERE Country='Spain' AND City='Madrid';
 
 or 사이에 있는 조건들 중 하나만이라도 만족하는 record를 추출한다.
 
-```mysql
+```sql
 SELECT * FROM Customers
 WHERE City='Madrid' OR City='München';
 ```
@@ -279,7 +350,7 @@ WHERE City='Madrid' OR City='München';
 
 조건에 해당하지 않는 record를 추출한다.
 
-```mysql
+```sql
 SELECT * FROM Customers
 WHERE NOT Country='Germany';
 ```
@@ -290,7 +361,7 @@ WHERE NOT Country='Germany';
 
 ## 4-4. AND, OR, NOT 연결해서 사용
 
-```mysql
+```sql
 SELECT * FROM Customers
 WHERE Country='Germany' AND (City='Frankfurt' OR City='München');
 ```
@@ -299,7 +370,7 @@ WHERE Country='Germany' AND (City='Frankfurt' OR City='München');
 
 
 
-```mysql
+```sql
 SELECT * FROM Customers
 WHERE NOT Country='Germany' AND NOT Country='USA';
 ```
@@ -314,7 +385,7 @@ WHERE NOT Country='Germany' AND NOT Country='USA';
 
 ORDER BY키워드는 기본적으로 오름차순으로 정렬함. 내림차순정렬을 하고 싶다면 DESC키워드를 사용해야 함.
 
-```mysql
+```sql
 SELECT column1, column2, ...
 FROM table_name
 ORDER BY column1, column2, ... ASC|DESC;
@@ -324,7 +395,7 @@ column1 기준으로 정렬 후, column1이 변하지 않는 선에서 column2�
 
 
 
-```mysql
+```sql
 SELECT * FROM Customers
 ORDER BY Country;
 ```
@@ -333,7 +404,7 @@ ORDER BY Country;
 
 
 
-```mysql
+```sql
 SELECT * FROM Customers
 ORDER BY Country, PostalCode;
 ```
@@ -352,14 +423,14 @@ ORDER BY Country, PostalCode;
 
 1. 컬럼이름과 값을 둘 다 쓰는 방법
 
-```mysql
+```sql
 INSERT INTO table_name (column1, column2, column3, ...)
 VALUES (value1, value2, value3, ...);
 ```
 
 2. 테이블의 모든 컬럼에 값을 넣을 경우, 컬럼 이름들을 적지 않아도 됨. **값의 순서가 테이블 칼럼의 순서와 동일한지 확인해야 함**.
 
-```mysql
+```sql
 INSERT INTO table_name
 VALUES (value1, value2, value3, ...);
 ```
@@ -384,7 +455,7 @@ NULL값은 비교연산자(=, <, <> 등)를 사용할 수 없기 때문에 IS NU
 
 * **IS NULL**
 
-```mysql
+```sql
 SELECT column_names
 FROM table_name
 WHERE column_name IS NULL;
@@ -392,7 +463,7 @@ WHERE column_name IS NULL;
 
 * **NOT NULL**
 
-```mysql
+```sql
 SELECT column_names
 FROM table_name
 WHERE column_name IS NOT NULL;
@@ -451,7 +522,7 @@ alias는 쿼리 기간동안만 존재함.
 
 ## 9-1. Alias Column Syntax
 
-```mysql
+```sql
 SELECT column_name AS alias_name
 FROM table_name;
 ```
@@ -460,7 +531,7 @@ FROM table_name;
 
 ## 9-2. Alias Table Syntax
 
-```mysql
+```sql
 SELECT column_name(s)
 FROM table_name AS alias_name;
 ```
