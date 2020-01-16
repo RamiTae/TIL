@@ -1,14 +1,22 @@
 # 1. sequelize로 foreign key 설정
 
-sequelize로 foreign key를 설정하는 방법은 3가지로 나눠진다.
+~~sequelize로 foreign key를 설정하는 방법은 3가지로 나눠진다.~~
 
-이 방법들을 모두 사용하지 말고 셋 중 하나의 방법만 사용하는 것이 좋다.
+~~이 방법들을 모두 사용하지 말고 셋 중 하나의 방법만 사용하는 것이 좋다.~~
 
-각 방법마다 자기만의 foreign key를 만들기 때문이다..
+~~각 방법마다 자기만의 foreign key를 만들기 때문이다..~~
 
-모델 define 시 세 방법이 다 같은 이름의 foreign key를 생성한다면 문제가 없겠지만(이미 존재하는 건 넘어가기 때문에),
+~~모델 define 시 세 방법이 다 같은 이름의 foreign key를 생성한다면 문제가 없겠지만(이미 존재하는 건 넘어가기 때문에),~~
 
-실수로 한 곳의 foreignKey값을 비워두면 'user_id'와 'userId'를 동시에 만들어버리는 일이 생길수도 있다..! (오늘의 삽질 포인트)
+~~실수로 한 곳의 foreignKey값을 비워두면 'user_id'와 'userId'를 동시에 만들어버리는 일이 생길수도 있다..! (오늘의 삽질 포인트)~~
+
+> 2020.01.16 추가
+>
+> 위 내용은 완전 잘못됐다.
+>
+> sequelize의 model에서 foreign key 설정을 하고, include를 통해 sequelize의 join기능을 사용하려면 hasMany랑 belongsTo를 다 써줘야 한다(**양쪽 모델에서 전부!!**).
+>
+> 1-1의 '모델 define 시 references로 설정'하는 부분은 테스트를 해보질 않아서 추후에 테스트를 해보고 다시 정리할것이다.
 
 
 
@@ -18,7 +26,7 @@ sequelize로 foreign key를 설정하는 방법은 3가지로 나눠진다.
 
 
 
-## 1-1.  모델 define 시 references로 설정하기
+## 1-1.  ~~모델 define 시 references로 설정하기~~(추후 테스트 후 수정)
 
 colunm의 references설정을 사용한다.
 
@@ -45,7 +53,7 @@ const urls = sequelize.define(
 
 
 
-## 1-2. belongsTo() 사용
+## 1-2. belongsTo(), hasMany() 사용
 
 > sequelize 공식문서: https://sequelize.org/master/class/lib/associations/belongs-to.js~BelongsTo.html
 
@@ -67,8 +75,6 @@ urls.belongsTo(users, { //urls는 users에 속해 있다 => url이 user모델의
 
 
 
-## 1-3. hasMany() 사용
-
 > sequelize 공식문서: https://sequelize.org/master/class/lib/associations/has-many.js~HasMany.html
 
 ```js
@@ -87,6 +93,16 @@ users.hasMany(urls, { //users는 많은 url을 가지고 있다 => url이 user�
 ```
 
 
+
+> 2020.01.16 추가
+>
+> 위처럼 관계가 있는 두 model 모두에게 관계성을 명시해줘야
+>
+> users에서 include를 통한 urls에 접근,
+>
+> urls에서 include를 통한 users에 접근
+>
+> 을 할 수 있다.
 
 
 
