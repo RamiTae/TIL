@@ -24,7 +24,7 @@
 
 ---
 
-# 공부 한 것
+# 공부한 것
 
 # 1. TypeORM-Relations
 
