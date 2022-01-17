@@ -7,13 +7,14 @@ on:
       - '!REAME.md'
     
 jobs:
-  steps:
-    # 수정중...
-    # - name: README rewrite
-    #   runs-on: ubuntu-latest
-    #   steps:
-    #     - shell: bash
-    #       run: 
+  post:
+    name: "README rewrite"
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '17'
+      run: node './src/makeReadme.mjs'
     # - name: add and commit
     #   uses: EndBug/add-and-commit@v7
     #   with:

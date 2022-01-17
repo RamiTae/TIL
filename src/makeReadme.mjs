@@ -40,6 +40,7 @@ export async function makeReadme() {
         return acc;
     }, '\n')
 
+    console.log(text)
     await filehandle.appendFile(text);
 }
 
