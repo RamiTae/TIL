@@ -18,6 +18,7 @@ jobs:
       with:
         node-version: '17'
     - run: pwd
+    - run: ls -al
     # - run: node '../src/makeReadme.mjs'
     # - name: add and commit
     #   uses: EndBug/add-and-commit@v7
