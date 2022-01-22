@@ -3,11 +3,11 @@ name: Countinuos Making README.md
 on:
   push:
     # 테스트용 임시 on 조건
-    branches:
-      - "main"
-    # paths:
-    #   - '**.md'
-    #   - '!REAME.md'
+    # branches:
+    #   - "main"
+    paths:
+      - '**.md'
+      - '!REAME.md'
     
 jobs:
   post:
@@ -19,15 +19,16 @@ jobs:
       with:
         node-version: '17'
     - run: node src/makeReadme.mjs
-    # - name: add and commit
-    #   uses: EndBug/add-and-commit@v7
-    #   with:
-    #     add: 'README.md'
-    #     author_name: RamiTae
-    #     author_email: ramiTae.dev@gmail.com
-    #     branch: main
-    #     committer_name: RamiTae
-    #     committer_email: ramiTae.dev@gmail.com
-    #     default_author: RamiTae
-    #     message: 'Commit from GitHub Actions: README 업데이트'
-    #     push: true
+
+    - name: add and commit
+      uses: EndBug/add-and-commit@v7
+      with:
+        add: 'README.md'
+        author_name: RamiTae
+        author_email: ramiTae.dev@gmail.com
+        branch: main
+        committer_name: RamiTae
+        committer_email: ramiTae.dev@gmail.com
+        default_author: RamiTae
+        message: 'Commit from GitHub Actions: README 업데이트'
+        push: true
