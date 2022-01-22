@@ -2,9 +2,6 @@ name: Countinuos Making README.md
 
 on:
   push:
-    # 테스트용 임시 on 조건
-    # branches:
-    #   - "main"
     paths:
       - '**.md'
       - '!REAME.md'
