@@ -1,0 +1,20 @@
+{
+  "name": "til",
+  "version": "1.0.0",
+  "description": "Today I Learned",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "make-readme": "node src/makeReadme.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RamiTae/TIL.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RamiTae/TIL/issues"
+  },
+  "homepage": "https://github.com/RamiTae/TIL#readme"
+}
