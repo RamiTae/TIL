@@ -10,6 +10,7 @@ Today I Learned.
 * [ExpressJs의 작동 방식](./ExpressJs/ExpressJs의-작동-방식.md)
 ## Git
 * [git cheatsheet](./Git/git-cheatsheet.md)
+* [github tip](./Git/github-tip.md)
 * [use github action](./Git/use-github-action.md)
 * [깃의 장점](./Git/깃의-장점.md)
 ## JavaScript
