@@ -24,11 +24,11 @@ jobs:
       uses: EndBug/add-and-commit@v7
       with:
         add: 'README.md'
-        author_name: RamiTae
+        author_name: ramiTae
         author_email: ramiTae.dev@gmail.com
         branch: main
-        committer_name: RamiTae
+        committer_name: ramiTae
         committer_email: ramiTae.dev@gmail.com
-        default_author: RamiTae
+        default_author: ramiTae
         message: 'Commit from GitHub Actions: README 업데이트'
         push: true
