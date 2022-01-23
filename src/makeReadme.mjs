@@ -25,7 +25,7 @@ export async function makeReadme() {
         return { dir, fileList };
     }))).filter(Boolean);
 
-    await copyFile('./asset/README.template.md', './README.md');
+    await copyFile('./asset/template/README.md', './README.md');
     const filehandle = await open('./README.md', 'a');
 
     const text = fileDataList.reduce((acc, val) => {
