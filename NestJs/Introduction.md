@@ -1,4 +1,5 @@
 # [Introduction](https://docs.nestjs.com/)
+
 [한국어 ver](https://github.com/nestjs/nest/blob/master/readme_kr.md)
 
 Nest는 효과적이고, 확장 가능한 [Node.js](https://nodejs.org/) 서버 사이드 애플리케이션을 빌드하기 위한 프레임워크입니다. Nest는 모던 Javascript를 사용하고, [TypeScript](http://www.typescriptlang.org/)로 빌드되었으며(순수 자바스크립트와 호환성을 유지합니다) OOP(객체 지향 프로그래밍), FP(함수형 프로그래밍), FRP(함수 반응형 프로그래밍)의 요소들이 결합되었습니다.
@@ -40,7 +41,7 @@ $ npm run start
 ```
 
 > Hint
-> 
+>
 > If you'd like to clone the repository without the git history, you can use **degit**.
 
 Open your browser and navigate to `http://localhost:3000/`.
