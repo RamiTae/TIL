@@ -32,7 +32,7 @@ export async function makeReadme() {
         acc += `## ${val.dir}\n`;
         val.fileList.forEach(file => {
             const subject = file.replace(/-/g,' ').replace('.md','');
-            const path = `./${val.dir}/${file}`;
+            const path = `/${val.dir}/${file}`;
 
             acc += `* [${subject}](${path})\n`
         })
