@@ -33,16 +33,16 @@ export async function makeReadme() {
   const filehandle = await open("./README.md", "a");
 
   const text = fileDataList.reduce((acc, val) => {
-    acc += `## ${val.dir}\n`;
+    acc += `\n## ${val.dir}\n\n`;
     val.fileList.forEach((file) => {
       const subject = file.replace(/-/g, " ").replace(".md", "");
       const path = `/${val.dir}/${file}`;
 
-      acc += `* [${subject}](${path})\n`;
+      acc += `- [${subject}](${path})\n`;
     });
 
     return acc;
-  }, "\n");
+  }, "");
 
   console.log(text);
   await filehandle.appendFile(text);

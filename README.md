@@ -12,25 +12,40 @@ README.md 파일은 Github Action 기능을 사용하여 자동으로 업데이�
 ---
 
 ## ExpressJs
-* [ExpressJs의 작동 방식](/ExpressJs/ExpressJs의-작동-방식.md)
+
+- [ExpressJs의 작동 방식](/ExpressJs/ExpressJs의-작동-방식.md)
+
 ## Git
-* [git cheatsheet](/Git/git-cheatsheet.md)
-* [github tip](/Git/github-tip.md)
-* [use github action](/Git/use-github-action.md)
-* [깃의 장점](/Git/깃의-장점.md)
+
+- [git cheatsheet](/Git/git-cheatsheet.md)
+- [github tip](/Git/github-tip.md)
+- [use github action](/Git/use-github-action.md)
+- [깃의 장점](/Git/깃의-장점.md)
+
 ## JavaScript
-* [import vs require](/JavaScript/import-vs-require.md)
-* [this](/JavaScript/this.md)
-* [비동기 프로그래밍](/JavaScript/비동기-프로그래밍.md)
+
+- [import vs require](/JavaScript/import-vs-require.md)
+- [this](/JavaScript/this.md)
+- [비동기 프로그래밍](/JavaScript/비동기-프로그래밍.md)
+
 ## LuceneQuery
-* [Lucene Query 문법](/LuceneQuery/Lucene-Query-문법.md)
+
+- [Lucene Query 문법](/LuceneQuery/Lucene-Query-문법.md)
+
 ## MongoDB
-* [몽구스에서 ObjectId 생성](/MongoDB/몽구스에서-ObjectId-생성.md)
+
+- [몽구스에서 ObjectId 생성](/MongoDB/몽구스에서-ObjectId-생성.md)
+
 ## NestJs
-* [Introduction](/NestJs/Introduction.md)
+
+- [Introduction](/NestJs/Introduction.md)
+
 ## Network
-* [IANA](/Network/IANA.md)
-* [ICANN](/Network/ICANN.md)
-* [Top level domain](/Network/Top-level-domain.md)
+
+- [IANA](/Network/IANA.md)
+- [ICANN](/Network/ICANN.md)
+- [Top level domain](/Network/Top-level-domain.md)
+
 ## NodeJs
-* [fsPromise](/NodeJs/fsPromise.md)
+
+- [fsPromise](/NodeJs/fsPromise.md)
