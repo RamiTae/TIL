@@ -38,6 +38,7 @@ README.md 파일은 Github Action 기능을 사용하여 자동으로 업데이�
 
 ## MongoDB
 
+- [aggregate](/MongoDB/aggregate.md)
 - [몽구스에서 ObjectId 생성](/MongoDB/몽구스에서-ObjectId-생성.md)
 
 ## NestJs
