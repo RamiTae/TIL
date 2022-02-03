@@ -4,6 +4,8 @@ This module provides a portable way of using operating system dependent function
 
 ## [os.getenv(key, default=None)](https://docs.python.org/3/library/os.html#os.getenv)
 
+운영체제의 환경 변수 값을 읽어옴. 환경 변수가 있으면 값을 반환하고, 없으면 deafult값을 반환. key, default 및 return 값은 str.
+
 Return the value of the environment variable key if it exists, or default if it doesn’t. key, default and the result are str.
 
 On Unix, keys and values are decoded with [sys.getfilesystemencoding()](https://docs.python.org/3/library/sys.html#sys.getfilesystemencoding) and `'surrogateescape'` error handler. Use [os.getenvb()](https://docs.python.org/3/library/os.html#os.getenvb) if you would like to use a different encoding.
