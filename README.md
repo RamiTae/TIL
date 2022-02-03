@@ -36,6 +36,10 @@ README.md 파일은 Github Action 기능을 사용하여 자동으로 업데이�
 
 - [Lucene Query 문법](/LuceneQuery/Lucene-Query-문법.md)
 
+## Mac
+
+- [Set environment variable mac](/Mac/Set-environment-variable-mac.md)
+
 ## MongoDB
 
 - [aggregate](/MongoDB/aggregate.md)
@@ -54,3 +58,7 @@ README.md 파일은 Github Action 기능을 사용하여 자동으로 업데이�
 ## NodeJs
 
 - [fsPromise](/NodeJs/fsPromise.md)
+
+## Python
+
+- [os_module](/Python/os_module.md)
