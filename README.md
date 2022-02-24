@@ -53,6 +53,12 @@ README.md 파일은 Github Action 기능을 사용하여 자동으로 업데이�
 - [ICANN](/Network/ICANN.md)
 - [Top level domain](/Network/Top-level-domain.md)
 
+## Nginx
+
+- [Basic Commands](/Nginx/Basic-Commands.md)
+- [Configuration Contexts](/Nginx/Configuration-Contexts.md)
+- [File Location](/Nginx/File-Location.md)
+
 ## NodeJs
 
 - [fsPromise](/NodeJs/fsPromise.md)
