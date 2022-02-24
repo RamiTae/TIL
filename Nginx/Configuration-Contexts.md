@@ -2,6 +2,7 @@
 
 ![overview](../asset/images/nginx-configuration-contexts-1.png)
 
+```mermaid
 graph LR
   main[Main] --> events[Events]
   main --> http[HTTP]
@@ -11,6 +12,7 @@ graph LR
   main --> stream[Stream]
   stream --> server2[Server]
   stream --> upstream2[Upstream]
+```
 
 Each Nginx Configuration has:
 * One Main context(Highest level directives)
