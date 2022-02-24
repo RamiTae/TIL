@@ -7,7 +7,7 @@
 
 # this의 종류
 
-![this의 종류](../asset/image/this.png)
+![this의 종류](../asset/images/this.png)
 
 ## 1. global this
 
