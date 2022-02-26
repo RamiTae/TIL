@@ -18,6 +18,7 @@ README.md 파일은 Github Action 기능을 사용하여 자동으로 업데이�
 
 ## Git
 
+- [Commit Type](/Git/Commit-Type.md)
 - [git cheatsheet](/Git/git-cheatsheet.md)
 - [github tip](/Git/github-tip.md)
 - [use github action](/Git/use-github-action.md)
