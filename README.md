@@ -72,3 +72,4 @@ README.md 파일은 Github Action 기능을 사용하여 자동으로 업데이�
 ## Python
 
 - [os_module](/Python/os_module.md)
+- [start_project](/Python/start_project.md)
