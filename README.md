@@ -63,6 +63,7 @@ README.md 파일은 Github Action 기능을 사용하여 자동으로 업데이�
 - [02. Configuration Contexts](/Nginx/02.-Configuration-Contexts.md)
 - [03. Reverse Proxy](/Nginx/03.-Reverse-Proxy.md)
 - [04. Load Balancing](/Nginx/04.-Load-Balancing.md)
+- [05. API Gateway](/Nginx/05.-API-Gateway.md)
 
 ## NodeJs
 
