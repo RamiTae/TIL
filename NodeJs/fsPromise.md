@@ -13,13 +13,13 @@
 
 ## fsPromises.copyFile(src, dest[, mode])
 
-- src \<string> | \<Buffer> | \<URL> source filename to copy
-- dest \<string> | \<Buffer> | \<URL> destination filename of the copy operation
-- mode \<integer> Optional modifiers that specify the behavior of the copy operation. It is possible to create a mask consisting of the bitwise OR of two or more values (e.g. fs.constants.COPYFILE_EXCL | fs.constants.COPYFILE_FICLONE) Default: 0.
+- src {string} | {Buffer} | {URL} source filename to copy
+- dest {string} | {Buffer} | {URL} destination filename of the copy operation
+- mode {integer} Optional modifiers that specify the behavior of the copy operation. It is possible to create a mask consisting of the bitwise OR of two or more values (e.g. fs.constants.COPYFILE_EXCL | fs.constants.COPYFILE_FICLONE) Default: 0.
   - fs.constants.COPYFILE_EXCL: The copy operation will fail if dest already exists.
   - fs.constants.COPYFILE_FICLONE: The copy operation will attempt to create a copy-on-write reflink. If the platform does not support copy-on-write, then a fallback copy mechanism is used.
   - fs.constants.COPYFILE_FICLONE_FORCE: The copy operation will attempt to create a copy-on-write reflink. If the platform does not support copy-on-write, then the operation will fail.
-- Returns: \<Promise> Fulfills with undefined upon success.
+- Returns: {Promise} Fulfills with undefined upon success.
 
   Asynchronously copies src to dest. By default, dest is overwritten if it already exists.
 
@@ -47,28 +47,28 @@
 
 ## Class: FileHandle
 
-A \<FileHandle> object is an object wrapper for a numeric file descriptor.
+A {FileHandle} object is an object wrapper for a numeric file descriptor.
 
-Instances of the \<FileHandle> object are created by the fsPromises.open() method.
+Instances of the {FileHandle} object are created by the fsPromises.open() method.
 
-All \<FileHandle> objects are \<EventEmitter>s.
+All {FileHandle} objects are {EventEmitter}s.
 
-If a \<FileHandle> is not closed using the filehandle.close() method, it will try to automatically close the file descriptor and emit a process warning, helping to prevent memory leaks. Please do not rely on this behavior because it can be unreliable and the file may not be closed. Instead, always explicitly close \<FileHandle>s. Node.js may change this behavior in the future.
+If a {FileHandle} is not closed using the filehandle.close() method, it will try to automatically close the file descriptor and emit a process warning, helping to prevent memory leaks. Please do not rely on this behavior because it can be unreliable and the file may not be closed. Instead, always explicitly close {FileHandle}s. Node.js may change this behavior in the future.
 
 ### Event: 'close'
 
-The 'close' event is emitted when the \<FileHandle> has been closed and can no longer be used.
+The 'close' event is emitted when the {FileHandle} has been closed and can no longer be used.
 
 ## filehandle.createWriteStream([options])
 
-- options \<Object>
-- encoding \<string> Default: 'utf8'
-- autoClose \<boolean> Default: true
-- emitClose \<boolean> Default: true
-- start \<integer>
-- Returns: \<fs.WriteStream>
+- options {Object}
+- encoding {string} Default: 'utf8'
+- autoClose {boolean} Default: true
+- emitClose {boolean} Default: true
+- start {integer}
+- Returns: {fs.WriteStream}
 
-  options may also include a start option to allow writing data at some position past the beginning of the file, allowed values are in the [0, Number.MAX_SAFE_INTEGER] range. Modifying a file rather than replacing it may require the flags open option to be set to r+ rather than the default r. The encoding can be any one of those accepted by \<Buffer>.
+  options may also include a start option to allow writing data at some position past the beginning of the file, allowed values are in the [0, Number.MAX_SAFE_INTEGER] range. Modifying a file rather than replacing it may require the flags open option to be set to r+ rather than the default r. The encoding can be any one of those accepted by {Buffer}.
 
   If autoClose is set to true (default behavior) on 'error' or 'finish' the file descriptor will be closed automatically. If autoClose is false, then the file descriptor won't be closed, even if there's an error. It is the application's responsibility to close it and make sure there's no file descriptor leak.
 
