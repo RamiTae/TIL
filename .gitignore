@@ -1,2 +1,5 @@
 # VSCode workspace
 *.code-workspace
+
+# Mac OS
+.DS_Store
